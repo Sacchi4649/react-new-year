@@ -7,7 +7,7 @@ import videoBg from "./assets/videoBg.mkv";
 
 function App() {
   const [newYearMessage, setNewYearMessage] = useState([
-    "Waiting for 2024 . . .",
+    "Waiting for 2024 . .",
   ]);
   const particleInit = async (engine) => {
     await loadFireworksPreset(engine);
@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       {/* <Particles init={particleInit} options={{ preset: "fireworks" }} /> */}
+      <div className="overlay"></div>
       <video
         src={videoBg}
         autoPlay
