@@ -3,7 +3,8 @@ import { loadFireworksPreset } from "tsparticles-preset-fireworks";
 import { Typewriter } from "react-simple-typewriter";
 import { useState } from "react";
 import Countdown from "react-countdown";
-import videoBg from "./assets/videoBg.mkv";
+import videoBg from "./assets/videoBg.webm";
+import bgm from "./assets/bgm.mp3";
 
 function App() {
   const [newYearMessage, setNewYearMessage] = useState([
@@ -23,11 +24,13 @@ function App() {
   return (
     <>
       {/* <Particles init={particleInit} options={{ preset: "fireworks" }} /> */}
+
       <div className="overlay"></div>
+      <audio src={bgm} autoPlay />
       <video
         src={videoBg}
         autoPlay
-        loop
+        muted
         className="object-cover absolute h-screen w-screen -z-10 top-0 left-0"
       />
 
